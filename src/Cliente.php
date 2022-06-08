@@ -2,18 +2,47 @@
 class Cliente 
 {
     // Propriedades (ou atributos)
-    public string $nome;
-    public string $email;
-    public string $senha = ""; // valor inicial padrão
-    public array $telefones;
+    private string $nome;
+    private string $email;
+    private string $senha;
 
-    // Dados
-    public function exibirDados(){
-        echo "<h3> $this->nome </h3>";
-        echo "<ul>";
-        echo "<li> $this->email</li>";
-        echo "<li>". implode(', ',$this->telefones)."</li>";
-        echo "</ul>";
+
+
+    // Métodos getters e setters
+
+                /* get = pegar*/ 
+    public function getNome():string{
+        return $this->nome;
+    }
+
+                            //Parametro
+    public function setNome(string $nome){
+        $this->nome = $nome;
+    //propriedade
+    }
+
+
+
+
+
+    public function getEmail():string{
+        return $this->email;
+    }
+
+    public function setEmail(string $recebeEmail){
+            $this->email = $recebeEmail;
+    }
+
+
+
+
+
+    public function getSenha():string{
+        return $this->senha;
+    }
+
+    public function setSenha(string $recebeSenha){
+        $this->senha = password_hash($recebeSenha, PASSWORD_DEFAULT);
     }
 
 }
