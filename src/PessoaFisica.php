@@ -1,4 +1,5 @@
 <?php
+require_once "Cliente.php";
 Class PessoaFisica extends Cliente // extends pois vem (herda) da classe cliente 
 {
 private string $cpf;

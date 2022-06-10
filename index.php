@@ -12,12 +12,11 @@
     <h2>Assuntos abordados:</h2>
     <ul>
         <li>Herança</li>
-        <li>Classe Abstrata</li>
+        <li>Classe Abstrata (não pode ser instanciada)</li>
     </ul>
 
     <?php 
     // Importando a classe
-    require_once "src/Cliente.php"; //superclasse
     require_once "src/PessoaFisica.php"; // subclasse
     require_once "src/PessoaJuridica.php"; //subclasse
     
