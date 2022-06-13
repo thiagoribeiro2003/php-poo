@@ -8,7 +8,8 @@ abstract class Cliente
     private string $nome;
     private string $email;
     private string $senha;
-
+    
+    private string $situacao = "a definir";
 
 
     // Métodos getters e setters
@@ -48,4 +49,32 @@ abstract class Cliente
         $this->senha = password_hash($recebeSenha, PASSWORD_DEFAULT);
     }
 
+
+
+
+    
+
+    /* Modificador de visibilidade
+    public: nenhuma restrição (padrão)
+    (todos acessam todos)
+
+    private: restrição total 
+    (só a classe conhece os recursos dela)
+    
+    protected: restrição parcial
+    (recursos acessíveis pela própria classe e pelas
+    subclasses que a herdam)
+    */
+    protected function getSituacao(): string
+    {
+        return $this->situacao;
+    }
+
+   
+    protected function setSituacao(string $situacao)
+    {
+        $this->situacao = $situacao;
+
+        return $this;
+    }
 }

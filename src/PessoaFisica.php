@@ -1,9 +1,14 @@
 <?php
 require_once "Cliente.php";
-Class PessoaFisica extends Cliente // extends pois vem (herda) da classe cliente 
+class PessoaFisica extends Cliente // extends pois vem (herda) da classe cliente 
 {
 private string $cpf;
 private int $idade;
+
+public function __construct()
+{
+    $this->setSituacao("normal");
+}
 
 
 
