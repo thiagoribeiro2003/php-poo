@@ -21,7 +21,7 @@ abstract class Cliente
 
                             //Parametro
     public function setNome(string $nome){
-        $this->nome = $nome;
+        $this->nome ="Cliente: ".$nome;
     //propriedade
     }
 

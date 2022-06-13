@@ -10,6 +10,12 @@ public function __construct()
     $this->setSituacao("normal");
 }
 
+public function exibirDados(){
+    echo "<h3>".$this->getNome()."</h3>";
+    echo "<p>".$this->getIdade()."</p>";
+    echo "<p>".$this->getSituacao()."</p>";
+}
+
 
 
 

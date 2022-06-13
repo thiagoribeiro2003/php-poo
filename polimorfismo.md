@@ -1,0 +1,1 @@
+Para o polimorfismo ser possível, é obrigatório que os métodos tenham a mesma assinatura.
