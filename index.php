@@ -11,50 +11,37 @@
     <hr>
     <h2>Assuntos abordados:</h2>
     <ul>
-        <li>Polimorfismo</li>
+        <li>Propriedades e Métodos Estáticos</li>
         
     </ul>
 
     <?php 
     // Importando a classe
     require_once "src/PessoaFisica.php"; // subclasse
-    require_once "src/PessoaJuridica.php"; //subclasse
-    
-    
-    $clientePF = new PessoaFisica;
-    $clientePF->setNome('Thiago');
-    $clientePF->setEmail('thiago@gmail.com');
-    $clientePF->setSenha('123456');
-    $clientePF->setCpf('123.456.789-00');
-    $clientePF->setIdade(30);
-
-
-    $clientePJ = new PessoaJuridica;
-    $clientePJ->setNome('Jon Oliva');
-    $clientePJ->setCnpj('123.456.789');
-    $clientePJ->setAnoFundacao(2009);
-
-    ?>
-
-    <h3>Pessoa Física</h3>
-    <p> <?=$clientePF->getNome()?></p>
-    
-    <h3>Pessoa Juridica</h3>
-    <p> <?=$clientePJ->getNome()?></p>
-
-    <hr>
-    <section><?=$clientePF->exibirDados()?></section>
-    <section><?=$clientePJ->exibirDados()?></section>
-    
-    <pre> <?=var_dump($clientePF)?> </pre>
-    <pre> <?=var_dump($clientePJ)?> </pre>
-
-
-    <!-- implode transforma um array em uma string -->
+  
+     $clientePF = new PessoaFisica;
+     $clientePF->setNome('Thiago');
+     $clientePF->setIdade(30);
     
 
-    <!-- set colocar dados
-        get pegar/ler dado -->
+ // Acessando e atribuindo valor para uma propriedade estática 
+ PessoaFisica::$cidade = "São Paulo";
+
+ // Acessando e lendo o valor de uma propriedade estática
+ echo PessoaFisica::$cidade
+
+  ?>
+<h3>Pessoa Física</h3>
+<p><?=$clientePF->getNome()?></p>
+<p><?=$clientePF->getIdade()?></p>
+<p> Tipo de atendimento:
+    <?=PessoaFisica::verificaIdade( $clientePF->getIdade())?>
+</p>
+   
+
+       
+
+       
 
 </body>
 </html>
