@@ -21,7 +21,7 @@
   
      $clientePF = new PessoaFisica;
      $clientePF->setNome('Thiago');
-     $clientePF->setIdade(30);
+     $clientePF->setIdade(60);
     
 
  // Acessando e atribuindo valor para uma propriedade estática 
